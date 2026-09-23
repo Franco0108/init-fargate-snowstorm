@@ -1,0 +1,5 @@
+{
+  "name": "fargate/php-basic",
+  "description": "Basic PHP service for ECS Fargate",
+  "require": {}
+}
