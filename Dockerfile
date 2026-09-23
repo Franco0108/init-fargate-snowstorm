@@ -3,8 +3,8 @@ FROM php:8.2-cli
 
 WORKDIR /var/www/html
 
-# Instalamos curl y habilitamos extensión curl de PHP
-RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/* && \
+# Instalamos curl y las librerías necesarias para la extensión curl de PHP
+RUN apt-get update && apt-get install -y curl libcurl4-openssl-dev && rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-install curl
 
 # Copiamos la app PHP
